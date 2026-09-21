@@ -1,4 +1,7 @@
-from event_topic import EventTopic
+try:
+    from src.event_topic import EventTopic
+except ModuleNotFoundError:  # pragma: no cover - supports direct script execution
+    from event_topic import EventTopic
 
 
 class EventConsumer:
